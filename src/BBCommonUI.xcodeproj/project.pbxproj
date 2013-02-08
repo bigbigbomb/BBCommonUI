@@ -15,6 +15,16 @@
 		D305944316C55FE20048CC20 /* BBStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = D305944216C55FE20048CC20 /* BBStackView.m */; };
 		D305945A16C564550048CC20 /* UIView+BBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D305945916C564550048CC20 /* UIView+BBCommon.m */; };
 		D305945D16C564C40048CC20 /* UIImage+BBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D305945C16C564C40048CC20 /* UIImage+BBCommon.m */; };
+		D305946B16C5991F0048CC20 /* BBTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = D305946A16C5991F0048CC20 /* BBTextView.m */; };
+		D305947916C59A0F0048CC20 /* BBLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = D305946D16C599280048CC20 /* BBLabel.m */; };
+		D305947A16C59A120048CC20 /* BBTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = D305947816C599B80048CC20 /* BBTextField.m */; };
+		D305947B16C59A1B0048CC20 /* BBTextFieldStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = D305947616C599A20048CC20 /* BBTextFieldStyle.m */; };
+		D305947C16C59A1D0048CC20 /* BBLabelStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = D305947416C5998F0048CC20 /* BBLabelStyle.m */; };
+		D305947D16C59A200048CC20 /* BBButtonStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = D305947216C599860048CC20 /* BBButtonStyle.m */; };
+		D305947E16C59A240048CC20 /* BBTextViewStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = D305947016C599760048CC20 /* BBTextViewStyle.m */; };
+		D305948116C59A4B0048CC20 /* NSString+BBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D305948016C59A4B0048CC20 /* NSString+BBCommon.m */; };
+		D305948416C59B670048CC20 /* UILabel+BBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D305948316C59B670048CC20 /* UILabel+BBCommon.m */; };
+		D305948716C59BB70048CC20 /* BBWrapView.m in Sources */ = {isa = PBXBuildFile; fileRef = D305948616C59BB70048CC20 /* BBWrapView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +57,26 @@
 		D305945916C564550048CC20 /* UIView+BBCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BBCommon.m"; sourceTree = "<group>"; };
 		D305945B16C564C40048CC20 /* UIImage+BBCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BBCommon.h"; sourceTree = "<group>"; };
 		D305945C16C564C40048CC20 /* UIImage+BBCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BBCommon.m"; sourceTree = "<group>"; };
+		D305946916C5991F0048CC20 /* BBTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBTextView.h; sourceTree = "<group>"; };
+		D305946A16C5991F0048CC20 /* BBTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBTextView.m; sourceTree = "<group>"; };
+		D305946C16C599280048CC20 /* BBLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLabel.h; sourceTree = "<group>"; };
+		D305946D16C599280048CC20 /* BBLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLabel.m; sourceTree = "<group>"; };
+		D305946F16C599760048CC20 /* BBTextViewStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBTextViewStyle.h; sourceTree = "<group>"; };
+		D305947016C599760048CC20 /* BBTextViewStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBTextViewStyle.m; sourceTree = "<group>"; };
+		D305947116C599860048CC20 /* BBButtonStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBButtonStyle.h; sourceTree = "<group>"; };
+		D305947216C599860048CC20 /* BBButtonStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBButtonStyle.m; sourceTree = "<group>"; };
+		D305947316C5998F0048CC20 /* BBLabelStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLabelStyle.h; sourceTree = "<group>"; };
+		D305947416C5998F0048CC20 /* BBLabelStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLabelStyle.m; sourceTree = "<group>"; };
+		D305947516C599A20048CC20 /* BBTextFieldStyle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBTextFieldStyle.h; sourceTree = "<group>"; };
+		D305947616C599A20048CC20 /* BBTextFieldStyle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBTextFieldStyle.m; sourceTree = "<group>"; };
+		D305947716C599B80048CC20 /* BBTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBTextField.h; sourceTree = "<group>"; };
+		D305947816C599B80048CC20 /* BBTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBTextField.m; sourceTree = "<group>"; };
+		D305947F16C59A4B0048CC20 /* NSString+BBCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BBCommon.h"; sourceTree = "<group>"; };
+		D305948016C59A4B0048CC20 /* NSString+BBCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BBCommon.m"; sourceTree = "<group>"; };
+		D305948216C59B670048CC20 /* UILabel+BBCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+BBCommon.h"; sourceTree = "<group>"; };
+		D305948316C59B670048CC20 /* UILabel+BBCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+BBCommon.m"; sourceTree = "<group>"; };
+		D305948516C59BB70048CC20 /* BBWrapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBWrapView.h; sourceTree = "<group>"; };
+		D305948616C59BB70048CC20 /* BBWrapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBWrapView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +124,7 @@
 		D305942B16C55D8D0048CC20 /* BBCommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				D305946E16C599640048CC20 /* Styling */,
 				D305945716C5641B0048CC20 /* Categories */,
 				D305943716C55F0E0048CC20 /* Views */,
 				D305942E16C55D8D0048CC20 /* BBCommonUI.h */,
@@ -114,6 +145,16 @@
 		D305943716C55F0E0048CC20 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D305946C16C599280048CC20 /* BBLabel.h */,
+				D305948216C59B670048CC20 /* UILabel+BBCommon.h */,
+				D305948516C59BB70048CC20 /* BBWrapView.h */,
+				D305948616C59BB70048CC20 /* BBWrapView.m */,
+				D305948316C59B670048CC20 /* UILabel+BBCommon.m */,
+				D305946D16C599280048CC20 /* BBLabel.m */,
+				D305947716C599B80048CC20 /* BBTextField.h */,
+				D305947816C599B80048CC20 /* BBTextField.m */,
+				D305946916C5991F0048CC20 /* BBTextView.h */,
+				D305946A16C5991F0048CC20 /* BBTextView.m */,
 				D305944116C55FE20048CC20 /* BBStackView.h */,
 				D305944216C55FE20048CC20 /* BBStackView.m */,
 				D305943816C55F1C0048CC20 /* BBToolbar.h */,
@@ -125,12 +166,29 @@
 		D305945716C5641B0048CC20 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				D305947F16C59A4B0048CC20 /* NSString+BBCommon.h */,
+				D305948016C59A4B0048CC20 /* NSString+BBCommon.m */,
 				D305945B16C564C40048CC20 /* UIImage+BBCommon.h */,
 				D305945C16C564C40048CC20 /* UIImage+BBCommon.m */,
 				D305945816C564550048CC20 /* UIView+BBCommon.h */,
 				D305945916C564550048CC20 /* UIView+BBCommon.m */,
 			);
-			name = Categories;
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		D305946E16C599640048CC20 /* Styling */ = {
+			isa = PBXGroup;
+			children = (
+				D305947516C599A20048CC20 /* BBTextFieldStyle.h */,
+				D305947616C599A20048CC20 /* BBTextFieldStyle.m */,
+				D305947316C5998F0048CC20 /* BBLabelStyle.h */,
+				D305947416C5998F0048CC20 /* BBLabelStyle.m */,
+				D305947116C599860048CC20 /* BBButtonStyle.h */,
+				D305947216C599860048CC20 /* BBButtonStyle.m */,
+				D305946F16C599760048CC20 /* BBTextViewStyle.h */,
+				D305947016C599760048CC20 /* BBTextViewStyle.m */,
+			);
+			path = Styling;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +246,16 @@
 				D305944316C55FE20048CC20 /* BBStackView.m in Sources */,
 				D305945A16C564550048CC20 /* UIView+BBCommon.m in Sources */,
 				D305945D16C564C40048CC20 /* UIImage+BBCommon.m in Sources */,
+				D305946B16C5991F0048CC20 /* BBTextView.m in Sources */,
+				D305947916C59A0F0048CC20 /* BBLabel.m in Sources */,
+				D305947A16C59A120048CC20 /* BBTextField.m in Sources */,
+				D305947B16C59A1B0048CC20 /* BBTextFieldStyle.m in Sources */,
+				D305947C16C59A1D0048CC20 /* BBLabelStyle.m in Sources */,
+				D305947D16C59A200048CC20 /* BBButtonStyle.m in Sources */,
+				D305947E16C59A240048CC20 /* BBTextViewStyle.m in Sources */,
+				D305948116C59A4B0048CC20 /* NSString+BBCommon.m in Sources */,
+				D305948416C59B670048CC20 /* UILabel+BBCommon.m in Sources */,
+				D305948716C59BB70048CC20 /* BBWrapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
