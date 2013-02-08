@@ -13,6 +13,8 @@
 		D305943E16C55F590048CC20 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D305943D16C55F590048CC20 /* CoreText.framework */; };
 		D305944016C55F5F0048CC20 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D305943F16C55F5F0048CC20 /* QuartzCore.framework */; };
 		D305944316C55FE20048CC20 /* BBStackView.m in Sources */ = {isa = PBXBuildFile; fileRef = D305944216C55FE20048CC20 /* BBStackView.m */; };
+		D305945A16C564550048CC20 /* UIView+BBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D305945916C564550048CC20 /* UIView+BBCommon.m */; };
+		D305945D16C564C40048CC20 /* UIImage+BBCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = D305945C16C564C40048CC20 /* UIImage+BBCommon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +43,10 @@
 		D305944116C55FE20048CC20 /* BBStackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBStackView.h; sourceTree = "<group>"; };
 		D305944216C55FE20048CC20 /* BBStackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBStackView.m; sourceTree = "<group>"; };
 		D305944416C560890048CC20 /* BBMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBMacros.h; sourceTree = "<group>"; };
+		D305945816C564550048CC20 /* UIView+BBCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BBCommon.h"; sourceTree = "<group>"; };
+		D305945916C564550048CC20 /* UIView+BBCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BBCommon.m"; sourceTree = "<group>"; };
+		D305945B16C564C40048CC20 /* UIImage+BBCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BBCommon.h"; sourceTree = "<group>"; };
+		D305945C16C564C40048CC20 /* UIImage+BBCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BBCommon.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +66,6 @@
 		D305941D16C55D8D0048CC20 = {
 			isa = PBXGroup;
 			children = (
-				D305943F16C55F5F0048CC20 /* QuartzCore.framework */,
-				D305943D16C55F590048CC20 /* CoreText.framework */,
-				D305943B16C55F430048CC20 /* UIKit.framework */,
 				D305942B16C55D8D0048CC20 /* BBCommonUI */,
 				D305942816C55D8D0048CC20 /* Frameworks */,
 				D305942716C55D8D0048CC20 /* Products */,
@@ -80,6 +83,9 @@
 		D305942816C55D8D0048CC20 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D305943F16C55F5F0048CC20 /* QuartzCore.framework */,
+				D305943D16C55F590048CC20 /* CoreText.framework */,
+				D305943B16C55F430048CC20 /* UIKit.framework */,
 				D305942916C55D8D0048CC20 /* Foundation.framework */,
 			);
 			name = Frameworks;
@@ -88,6 +94,7 @@
 		D305942B16C55D8D0048CC20 /* BBCommonUI */ = {
 			isa = PBXGroup;
 			children = (
+				D305945716C5641B0048CC20 /* Categories */,
 				D305943716C55F0E0048CC20 /* Views */,
 				D305942E16C55D8D0048CC20 /* BBCommonUI.h */,
 				D305944416C560890048CC20 /* BBMacros.h */,
@@ -113,6 +120,17 @@
 				D305943916C55F1C0048CC20 /* BBToolbar.m */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		D305945716C5641B0048CC20 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				D305945B16C564C40048CC20 /* UIImage+BBCommon.h */,
+				D305945C16C564C40048CC20 /* UIImage+BBCommon.m */,
+				D305945816C564550048CC20 /* UIView+BBCommon.h */,
+				D305945916C564550048CC20 /* UIView+BBCommon.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +186,8 @@
 			files = (
 				D305943A16C55F1C0048CC20 /* BBToolbar.m in Sources */,
 				D305944316C55FE20048CC20 /* BBStackView.m in Sources */,
+				D305945A16C564550048CC20 /* UIView+BBCommon.m in Sources */,
+				D305945D16C564C40048CC20 /* UIImage+BBCommon.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
