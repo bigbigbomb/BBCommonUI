@@ -66,7 +66,7 @@
 
 - (void)drawPlaceholderInRect:(CGRect)rect {
     [self.placeholderStyle.color setFill];
-    [self.placeholder drawInRect:rect withFont:self.placeholderStyle.font lineBreakMode:UILineBreakModeWordWrap alignment:self.textAlignment];
+    [self.placeholder drawInRect:rect withFont:self.placeholderStyle.font lineBreakMode:NSLineBreakByWordWrapping alignment:self.textAlignment];
 }
 
 - (BOOL)validate {
