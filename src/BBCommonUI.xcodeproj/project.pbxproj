@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4209C5EAFA6301FEACAE7B32 /* BBScrollView.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4209CFA7AC415C793DFF12C5 /* BBScrollView.h */; };
+		4209CBE87D457FC6841F04FE /* BBScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4209CC0BCD2286D964CC5BD6 /* BBScrollView.m */; };
 		D305942A16C55D8D0048CC20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D305942916C55D8D0048CC20 /* Foundation.framework */; };
 		D305942F16C55D8D0048CC20 /* BBCommonUI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D305942E16C55D8D0048CC20 /* BBCommonUI.h */; };
 		D305943A16C55F1C0048CC20 /* BBToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D305943916C55F1C0048CC20 /* BBToolbar.m */; };
@@ -35,12 +37,15 @@
 			dstSubfolderSpec = 16;
 			files = (
 				D305942F16C55D8D0048CC20 /* BBCommonUI.h in CopyFiles */,
+				4209C5EAFA6301FEACAE7B32 /* BBScrollView.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		4209CC0BCD2286D964CC5BD6 /* BBScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BBScrollView.m; sourceTree = "<group>"; };
+		4209CFA7AC415C793DFF12C5 /* BBScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBScrollView.h; sourceTree = "<group>"; };
 		D305942616C55D8D0048CC20 /* libBBCommonUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBBCommonUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D305942916C55D8D0048CC20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D305942D16C55D8D0048CC20 /* BBCommonUI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BBCommonUI-Prefix.pch"; sourceTree = "<group>"; };
@@ -159,6 +164,8 @@
 				D305944216C55FE20048CC20 /* BBStackView.m */,
 				D305943816C55F1C0048CC20 /* BBToolbar.h */,
 				D305943916C55F1C0048CC20 /* BBToolbar.m */,
+				4209CFA7AC415C793DFF12C5 /* BBScrollView.h */,
+				4209CC0BCD2286D964CC5BD6 /* BBScrollView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +263,7 @@
 				D305948116C59A4B0048CC20 /* NSString+BBCommon.m in Sources */,
 				D305948416C59B670048CC20 /* UILabel+BBCommon.m in Sources */,
 				D305948716C59BB70048CC20 /* BBWrapView.m in Sources */,
+				4209CBE87D457FC6841F04FE /* BBScrollView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

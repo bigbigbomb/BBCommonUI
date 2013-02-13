@@ -11,5 +11,6 @@
 #import "BBTextField.h"
 #import "BBTextView.h"
 #import "BBWrapView.h"
+#import "BBScrollView.h"
 #import "NSString+BBCommon.h"
 #import "UILabel+BBCommon.h"
