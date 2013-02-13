@@ -7,18 +7,18 @@
 @interface BBWrapView : UIView {
     
 @private
-    float _rightMargin;
+    float _itemPadding;
     float _lineHeight;
     CGPoint _currentPosition;
     UIEdgeInsets _edgeInsets;
     
 }
 
-@property(nonatomic) float rightMargin;
+@property(nonatomic) float itemPadding;
 @property(nonatomic) float lineHeight;
 @property(nonatomic) CGPoint currentPosition;
 @property(nonatomic) UIEdgeInsets edgeInsets;
 
-- (id)initWithLineHeight:(float)lineHeight rightMargin:(float)rightMargin edgeInsets:(UIEdgeInsets)edgeInsets;
+- (id)initWithLineHeight:(float)lineHeight itemPadding:(float)itemPadding edgeInsets:(UIEdgeInsets)edgeInsets;
 
 @end
