@@ -4,23 +4,37 @@
 //
 #import <UIKit/UIKit.h>
 
+@protocol BBWrapViewDelegate;
+
 @interface BBWrapView : UIView {
-    
 @private
-    float _itemPadding;
-    float _lineHeight;
-    float _availableRightSpace;
-    CGPoint _currentPosition;
-    UIEdgeInsets _edgeInsets;
-    
+    id <BBWrapViewDelegate> __unsafe_unretained _delegate;
 }
 
 @property(nonatomic) float itemPadding;
 @property(nonatomic) float lineHeight;
-@property(nonatomic) float availableRightSpace;
-@property(nonatomic) CGPoint currentPosition;
+@property(nonatomic, readonly) float availableRightSpace;
 @property(nonatomic) UIEdgeInsets edgeInsets;
 
+/**
+ * The object acting as the delegate for the wrap view instance.
+ */
+@property(unsafe_unretained) id <BBWrapViewDelegate> delegate;
+
+
 - (id)initWithLineHeight:(float)lineHeight itemPadding:(float)itemPadding edgeInsets:(UIEdgeInsets)edgeInsets;
+
+@end
+
+/**
+ * Provides information to a delegate receiver about changes to a wrap view.
+ */
+@protocol BBWrapViewDelegate <NSObject>
+
+@required
+/**
+ * Called when the wrap view size changes due to a subview being added, removed or resized.
+ */
+- (void)wrapViewLayoutDidChange:(BBWrapView *)wrapView;
 
 @end

@@ -6,24 +6,18 @@
 
 @interface BBWrapView ()
 @property(nonatomic, strong) UIView *viewToRemove;
+@property(nonatomic) CGPoint currentPosition;
 
+@property(nonatomic, readwrite) float availableRightSpace;
 @end
 
 @implementation BBWrapView
 
-@synthesize itemPadding = _itemPadding;
-@synthesize lineHeight = _lineHeight;
-@synthesize currentPosition = _currentPosition;
-@synthesize edgeInsets = _edgeInsets;
-@synthesize viewToRemove = _viewToRemove;
-
-
 - (id)initWithLineHeight:(float)lineHeight itemPadding:(float)itemPadding edgeInsets:(UIEdgeInsets)edgeInsets {
-    self = [super init];
+    self = [super initWithFrame:CGRectMake(0, 0, 0, lineHeight)];
     if (self) {
         _lineHeight = lineHeight;
         _itemPadding = itemPadding;
-        _availableRightSpace = 0;
         _edgeInsets = edgeInsets;
         _currentPosition = CGPointMake(edgeInsets.left, edgeInsets.top);
     }
@@ -31,7 +25,19 @@
     return self;
 }
 
-- (void)layoutSubviewsCore {
+- (void)setAvailableRightSpace:(float)availableRightSpace {
+    _availableRightSpace = availableRightSpace;
+    [self.delegate wrapViewLayoutDidChange:self];
+}
+
+
+- (void)willRemoveSubview:(UIView *)subview {
+    self.viewToRemove = subview;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+
     self.currentPosition = CGPointMake(self.edgeInsets.left, self.edgeInsets.top);
     for (UIView *view in [self subviews]) {
         if (self.viewToRemove == view)
@@ -46,13 +52,5 @@
     self.viewToRemove = nil;
 }
 
-- (void)didAddSubview:(UIView *)subview {
-    [self layoutSubviewsCore];
-}
-
-- (void)willRemoveSubview:(UIView *)subview {
-    self.viewToRemove = subview;
-    [self layoutSubviewsCore];
-}
 
 @end
