@@ -13,14 +13,13 @@
 
 @property(nonatomic) float itemPadding;
 @property(nonatomic) float lineHeight;
-@property(nonatomic, readonly) float availableRightSpace;
 @property(nonatomic) UIEdgeInsets edgeInsets;
+@property(nonatomic) BOOL verticallyCenterItems;
 
 /**
  * The object acting as the delegate for the wrap view instance.
  */
 @property(unsafe_unretained) id <BBWrapViewDelegate> delegate;
-
 
 - (id)initWithLineHeight:(float)lineHeight itemPadding:(float)itemPadding edgeInsets:(UIEdgeInsets)edgeInsets;
 

@@ -7,11 +7,10 @@
 @interface BBWrapView ()
 @property(nonatomic, strong) UIView *viewToRemove;
 @property(nonatomic) CGPoint currentPosition;
-
-@property(nonatomic, readwrite) float availableRightSpace;
 @end
 
 @implementation BBWrapView
+@synthesize verticallyCenterItems = _verticallyCenterItems;
 
 - (id)initWithLineHeight:(float)lineHeight itemPadding:(float)itemPadding edgeInsets:(UIEdgeInsets)edgeInsets {
     self = [super initWithFrame:CGRectMake(0, 0, 0, lineHeight)];
@@ -24,12 +23,6 @@
 
     return self;
 }
-
-- (void)setAvailableRightSpace:(float)availableRightSpace {
-    _availableRightSpace = availableRightSpace;
-    [self.delegate wrapViewLayoutDidChange:self];
-}
-
 
 - (void)willRemoveSubview:(UIView *)subview {
     self.viewToRemove = subview;
@@ -44,11 +37,12 @@
             continue;
         if (self.currentPosition.x + view.frame.size.width > self.frame.size.width + self.edgeInsets.right)
             self.currentPosition = CGPointMake(self.edgeInsets.left, self.currentPosition.y + self.lineHeight);
-        view.frame = CGRectMake(self.currentPosition.x, self.currentPosition.y, view.frame.size.width, view.frame.size.height);
+        NSUInteger verticalCenterOffset = self.verticallyCenterItems ? (NSUInteger) floor((self.lineHeight - view.frame.size.height) / 2.0) : 0;
+        view.frame = CGRectMake(self.currentPosition.x, self.currentPosition.y + verticalCenterOffset, view.frame.size.width, view.frame.size.height);
         self.currentPosition = CGPointMake(self.currentPosition.x + view.frame.size.width + self.itemPadding, self.currentPosition.y);
         self.frame = CGRectMake(self.frame.origin.x, self.frame.origin.y, self.frame.size.width, self.currentPosition.y + self.lineHeight + self.edgeInsets.bottom);
-        self.availableRightSpace = self.frame.size.width - self.currentPosition.x - self.edgeInsets.right;
     }
+    [self.delegate wrapViewLayoutDidChange:self];
     self.viewToRemove = nil;
 }
 
