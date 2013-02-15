@@ -35,7 +35,7 @@
     for (UIView *view in [self subviews]) {
         if (self.viewToRemove == view)
             continue;
-        if (self.currentPosition.x + view.frame.size.width > self.frame.size.width + self.edgeInsets.right)
+        if (self.currentPosition.x + view.frame.size.width >= self.frame.size.width - self.edgeInsets.right)
             self.currentPosition = CGPointMake(self.edgeInsets.left, self.currentPosition.y + self.lineHeight);
         NSUInteger verticalCenterOffset = self.verticallyCenterItems ? (NSUInteger) floor((self.lineHeight - view.frame.size.height) / 2.0) : 0;
         view.frame = CGRectMake(self.currentPosition.x, self.currentPosition.y + verticalCenterOffset, view.frame.size.width, view.frame.size.height);
