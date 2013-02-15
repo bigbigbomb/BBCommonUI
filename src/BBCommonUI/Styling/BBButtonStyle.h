@@ -30,5 +30,5 @@ typedef void (^BBButtonCustomizer)(UIButton *button, BBButtonStyle *currentStyle
 - (void)updateAppearance:(UIButton *)button;
 
 - (UIButton *)buttonWithTitle:(NSString *)title frame:(CGRect)frame;
-
+- (UIBarButtonItem *)barButtonItemWithTitle:(NSString *)title frame:(CGRect)frame target:(id)target action:(SEL)action;
 @end

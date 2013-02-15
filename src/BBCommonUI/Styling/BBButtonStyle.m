@@ -104,6 +104,13 @@ static char *bbButtonStyleKey = "bbButtonStyle";
     return button;
 }
 
+
+- (UIBarButtonItem *)barButtonItemWithTitle:(NSString *)title frame:(CGRect)frame target:(id)target action:(SEL)action {
+    UIButton *button = [self buttonWithTitle:title frame:frame];
+    [button addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+    return [[UIBarButtonItem alloc] initWithCustomView:button];
+}
+
 - (id)copyWithZone:(NSZone *)zone {
     BBButtonStyle *copy = [[BBButtonStyle allocWithZone:zone] init];
     
