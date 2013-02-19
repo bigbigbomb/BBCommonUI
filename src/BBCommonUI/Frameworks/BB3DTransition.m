@@ -9,7 +9,7 @@
 
 #import <objc/runtime.h>
 #import "BB3DTransition.h"
-#import "UIImage+BBCommon.h"
+#import "UIView+BBCommon.h"
 
 static float BB3DTopLeftRadianValues[] = {(float) RADIANS(0), (float) RADIANS(20), (float) RADIANS(-90), (float) RADIANS(90), (float) RADIANS(-15), (float) RADIANS(0)};
 static float BB3DBottomRightRadianValues[] ={(float) RADIANS(0), (float) RADIANS(-20), (float) RADIANS(90), (float) RADIANS(-90), (float) RADIANS(15), (float) RADIANS(0)};
