@@ -11,6 +11,8 @@
 		4209CBE87D457FC6841F04FE /* BBScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4209CC0BCD2286D964CC5BD6 /* BBScrollView.m */; };
 		59A68255B13AF3CBD67EE488 /* NSObject+Selectors.m in Sources */ = {isa = PBXBuildFile; fileRef = 59A680662DD3EFBD0E9CE27F /* NSObject+Selectors.m */; };
 		59A6857C555C9647A156E317 /* NSObject+Selectors.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 59A687A1F1F6C711813074FE /* NSObject+Selectors.h */; };
+		92404B11F21695B16AF64923 /* BB3DTransition.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 92404AAB438B2F94FF7B4DF3 /* BB3DTransition.h */; };
+		92404B14A0A34A1FA1920941 /* BB3DTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 924042B3584608CB84DCC691 /* BB3DTransition.m */; };
 		D305942A16C55D8D0048CC20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D305942916C55D8D0048CC20 /* Foundation.framework */; };
 		D305942F16C55D8D0048CC20 /* BBCommonUI.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = D305942E16C55D8D0048CC20 /* BBCommonUI.h */; };
 		D305943A16C55F1C0048CC20 /* BBToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = D305943916C55F1C0048CC20 /* BBToolbar.m */; };
@@ -41,6 +43,7 @@
 				D305942F16C55D8D0048CC20 /* BBCommonUI.h in CopyFiles */,
 				4209C5EAFA6301FEACAE7B32 /* BBScrollView.h in CopyFiles */,
 				59A6857C555C9647A156E317 /* NSObject+Selectors.h in CopyFiles */,
+				92404B11F21695B16AF64923 /* BB3DTransition.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +54,8 @@
 		4209CFA7AC415C793DFF12C5 /* BBScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BBScrollView.h; sourceTree = "<group>"; };
 		59A680662DD3EFBD0E9CE27F /* NSObject+Selectors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Selectors.m"; sourceTree = "<group>"; };
 		59A687A1F1F6C711813074FE /* NSObject+Selectors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Selectors.h"; sourceTree = "<group>"; };
+		924042B3584608CB84DCC691 /* BB3DTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BB3DTransition.m; sourceTree = "<group>"; };
+		92404AAB438B2F94FF7B4DF3 /* BB3DTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BB3DTransition.h; sourceTree = "<group>"; };
 		D305942616C55D8D0048CC20 /* libBBCommonUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBBCommonUI.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D305942916C55D8D0048CC20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D305942D16C55D8D0048CC20 /* BBCommonUI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BBCommonUI-Prefix.pch"; sourceTree = "<group>"; };
@@ -103,6 +108,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92404D3A22CCCF4605176193 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				924042B3584608CB84DCC691 /* BB3DTransition.m */,
+				92404AAB438B2F94FF7B4DF3 /* BB3DTransition.h */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
 		D305941D16C55D8D0048CC20 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +154,7 @@
 				D305942E16C55D8D0048CC20 /* BBCommonUI.h */,
 				D305944416C560890048CC20 /* BBMacros.h */,
 				D305942C16C55D8D0048CC20 /* Supporting Files */,
+				92404D3A22CCCF4605176193 /* Frameworks */,
 			);
 			path = BBCommonUI;
 			sourceTree = "<group>";
@@ -272,6 +287,7 @@
 				D305948716C59BB70048CC20 /* BBWrapView.m in Sources */,
 				4209CBE87D457FC6841F04FE /* BBScrollView.m in Sources */,
 				59A68255B13AF3CBD67EE488 /* NSObject+Selectors.m in Sources */,
+				92404B14A0A34A1FA1920941 /* BB3DTransition.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
