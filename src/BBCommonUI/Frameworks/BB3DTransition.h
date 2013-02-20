@@ -38,7 +38,7 @@ typedef enum {
 + (void)flip:(UIView *)view withFlipDirection:(BB3DFlipDirection)flipDirection completion:(void(^)(BOOL finished))completion;
 + (void)spin:(UIView *)fromView toView:(UIView *)toView spinDirection:(BB3DSpinDirection)spinDirection fromViewCompletion:(void(^)(BOOL finished))fromViewCompletion toViewCompletion:(void(^)(BOOL finished))toViewCompletion;
 + (void)clockFlip:(UIView *)fromView toView:(UIView *)toView withClockFlipDirection:(BB3DClockFlipDirection)clockFlipDirection completion:(void(^)(BOOL finished))completion;
-+ (void)clockFlip:(UIView *)fromView toView:(UIView *)toView withClockFlipDirection:(BB3DClockFlipDirection)clockFlipDirection completion:(void(^)(BOOL finished))completion shadowImage:(UIImage *)shadowImage shineImage:(UIImage *)shineImage;
++ (void)clockFlip:(UIView *)fromView toView:(UIView *)toView withClockFlipDirection:(BB3DClockFlipDirection)clockFlipDirection completion:(void(^)(BOOL finished))completion shadowImage:(UIImage *)shadowImage bottomShadowImage:(UIImage *)bottomShadowImage shineImage:(UIImage *)shineImage;
 
 + (void)setPerspectiveAmount:(float)amount;
 + (float)getPerspectiveAmount;

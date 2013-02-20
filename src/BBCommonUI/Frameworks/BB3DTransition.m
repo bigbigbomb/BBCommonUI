@@ -35,7 +35,7 @@ static float _clockFlipDuration;
     _clockFlipDuration = 0.3;
 }
 
-+ (void)clockFlip:(UIView *)fromView toView:(UIView *)toView withClockFlipDirection:(BB3DClockFlipDirection)clockFlipDirection completion:(void(^)(BOOL finished))completion shadowImage:(UIImage *)shadowImage shineImage:(UIImage *)shineImage {
++ (void)clockFlip:(UIView *)fromView toView:(UIView *)toView withClockFlipDirection:(BB3DClockFlipDirection)clockFlipDirection completion:(void(^)(BOOL finished))completion shadowImage:(UIImage *)shadowImage bottomShadowImage:(UIImage *)bottomShadowImage shineImage:(UIImage *)shineImage {
     /*
         1.)Create a container in superview of fromView to hold the effect.
         2.)Create top and bottom UIImageViews from the fromView, add them to the container, hide the fromView
@@ -88,7 +88,7 @@ static float _clockFlipDuration;
         shine.backgroundColor = [UIColor clearColor];
         shadow = [[UIImageView alloc] initWithImage:shadowImage];
         shadow.backgroundColor = [UIColor clearColor];
-        bottomShadow = [[UIImageView alloc] initWithImage:shadowImage];
+        bottomShadow = [[UIImageView alloc] initWithImage:bottomShadowImage];
         bottomShadow.backgroundColor = [UIColor clearColor];
     }
     else {
@@ -181,7 +181,7 @@ static float _clockFlipDuration;
 }
 
 + (void)clockFlip:(UIView *)fromView toView:(UIView *)toView withClockFlipDirection:(BB3DClockFlipDirection)clockFlipDirection completion:(void(^)(BOOL finished))completion {
-    [self clockFlip:fromView toView:toView withClockFlipDirection:clockFlipDirection completion:completion shadowImage:nil shineImage:nil];
+    [self clockFlip:fromView toView:toView withClockFlipDirection:clockFlipDirection completion:completion shadowImage:nil bottomShadowImage:nil shineImage:nil];
 }
 
 + (BOOL)isFlipping:(UIView *)view {
