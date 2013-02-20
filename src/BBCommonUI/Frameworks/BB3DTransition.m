@@ -47,7 +47,7 @@ static float _clockFlipDuration;
            If flipping from bottom animate the bottom image of the fromView 90 degrees then the top of the toView 90 degrees
         5.)Remove the container and unhide the fromView
      */
-    float perspective = _perspectiveAmount * 4.0;
+    float perspective = _perspectiveAmount * 2.0;
     UIView *parent = [fromView superview];
     UIView *container = [[UIView alloc] initWithFrame:fromView.frame];
     [parent addSubview:container];
@@ -81,21 +81,28 @@ static float _clockFlipDuration;
 
     UIImageView *shine;
     UIImageView *shadow;
+    UIImageView *bottomShadow;
 
     if (shineImage){
         shine = [[UIImageView alloc] initWithImage:shineImage];
         shine.backgroundColor = [UIColor clearColor];
         shadow = [[UIImageView alloc] initWithImage:shadowImage];
         shadow.backgroundColor = [UIColor clearColor];
+        bottomShadow = [[UIImageView alloc] initWithImage:shadowImage];
+        bottomShadow.backgroundColor = [UIColor clearColor];
     }
     else {
         shine = [[UIImageView alloc] init];
         shine.backgroundColor = [UIColor whiteColor];
         shadow = [[UIImageView alloc] init];
         shadow.backgroundColor = [UIColor blackColor];
+        bottomShadow = [[UIImageView alloc] init];
+        bottomShadow.backgroundColor = [UIColor blackColor];
     }
 
     if (clockFlipDirection == BB3DClockFlipFromTop) {
+        [fromViewBottomHalf insertSubview:bottomShadow atIndex:0];
+        bottomShadow.alpha = 0;
         fromViewTopHalf.layer.transform = fromT;
         [fromViewTopHalf insertSubview:shadow atIndex:0];
         shadow.frame = CGRectMake(0, 0, BBW(fromViewTopHalf), BBH(fromViewTopHalf));
@@ -123,6 +130,7 @@ static float _clockFlipDuration;
                                                   endT = CATransform3DRotate(endT, (float) RADIANS(0), 1.0f, 0.0f, 0.0f);
                                                   toViewSection.layer.transform = endT;
                                                   shine.alpha = 0;
+                                                  bottomShadow.alpha = 0.8;
                                               }
                                               completion:^(BOOL finished2){
                                                   [container removeFromSuperview];
@@ -132,6 +140,8 @@ static float _clockFlipDuration;
                          }];
     }
     else {
+        [fromViewTopHalf insertSubview:bottomShadow atIndex:0];
+        bottomShadow.alpha = 0.8;
         fromViewBottomHalf.layer.transform = fromT;
         [fromViewBottomHalf insertSubview:shine atIndex:0];
         shine.frame = CGRectMake(0, 0, BBW(fromViewBottomHalf), BBH(fromViewBottomHalf));
@@ -148,6 +158,7 @@ static float _clockFlipDuration;
                              endT = CATransform3DRotate(endT, (float) RADIANS(90), 1.0f, 0.0f, 0.0f);
                              fromViewBottomHalf.layer.transform = endT;
                              shine.alpha = .8;
+                             bottomShadow.alpha = 0;
                          }
                          completion:^(BOOL finished){
                              [UIView animateWithDuration:_clockFlipDuration * 0.5
