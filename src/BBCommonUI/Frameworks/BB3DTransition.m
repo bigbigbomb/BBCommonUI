@@ -101,6 +101,7 @@ static float _clockFlipDuration;
     }
 
     if (clockFlipDirection == BB3DClockFlipFromTop) {
+        BBResizeFrame(bottomShadow, BBW(fromViewBottomHalf), BBH(fromViewBottomHalf) - 2);
         [fromViewBottomHalf insertSubview:bottomShadow atIndex:0];
         bottomShadow.alpha = 0;
         fromViewTopHalf.layer.transform = fromT;
@@ -109,7 +110,7 @@ static float _clockFlipDuration;
         shadow.alpha = 0;
         [toViewSection insertSubview:shine atIndex:0];
         shine.frame = CGRectMake(0, 0, toViewSection.bounds.size.width, toViewSection.bounds.size.height);
-        shine.alpha = .8;
+        shine.alpha = .6;
         [UIView animateWithDuration:_clockFlipDuration * 0.5
                               delay:0
                             options:UIViewAnimationOptionCurveEaseIn
@@ -138,8 +139,16 @@ static float _clockFlipDuration;
                                                       completion(finished2);
                                               }];
                          }];
+        [UIView animateWithDuration:_clockFlipDuration * 0.5
+                              delay:_clockFlipDuration * 0.25
+                            options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                             bottomShadow.alpha = 0.8;
+                         }
+                         completion:nil];
     }
     else {
+        BBResizeFrame(bottomShadow, BBW(fromViewTopHalf), BBH(fromViewTopHalf) - 2);
         [fromViewTopHalf insertSubview:bottomShadow atIndex:0];
         bottomShadow.alpha = 0.8;
         fromViewBottomHalf.layer.transform = fromT;
@@ -157,7 +166,7 @@ static float _clockFlipDuration;
                              endT.m34 = _perspectiveAmount;
                              endT = CATransform3DRotate(endT, (float) RADIANS(90), 1.0f, 0.0f, 0.0f);
                              fromViewBottomHalf.layer.transform = endT;
-                             shine.alpha = .8;
+                             shine.alpha = .6;
                              bottomShadow.alpha = 0;
                          }
                          completion:^(BOOL finished){
@@ -177,6 +186,13 @@ static float _clockFlipDuration;
                                                       completion(finished2);
                                               }];
                          }];
+        [UIView animateWithDuration:_clockFlipDuration * 0.5
+                              delay:_clockFlipDuration * 0.25
+                            options:UIViewAnimationOptionCurveEaseIn
+                         animations:^{
+                             bottomShadow.alpha = 0;
+                         }
+                         completion:nil];
     }
 }
 
