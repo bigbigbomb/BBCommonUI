@@ -68,3 +68,11 @@ void objc_copyStruct(void *dest, const void *src, ptrdiff_t size, BOOL atomic,
 #define BBRndFloat(low, high) ((((float) arc4random() / ARC4RANDOM_MAX) * (high - low)) + low)
 
 #define BBAddTintToViewWithColor(UIVIEW,UICOLOR) {UIView *tintLayer =[[UIView alloc] initWithFrame:CGRectMake(0,0,BBW(UIVIEW),BBH(UIVIEW))]; tintLayer.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight; tintLayer.alpha=0.25; tintLayer.backgroundColor=UICOLOR; [UIVIEW addSubview:tintLayer];}
+
+#define SuppressPerformSelectorLeakWarning(Stuff) \
+    do { \
+        _Pragma("clang diagnostic push") \
+        _Pragma("clang diagnostic ignored \"-Warc-performSelector-leaks\"") \
+        Stuff; \
+        _Pragma("clang diagnostic pop") \
+    } while (0)
